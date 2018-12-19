@@ -124,6 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |Lower | Lower| Caps |  Alt |  GUI | Space|  BS  | Enter| Space| GUI  | Alt  | Menu |Lower |Lower |
    * `-------------------------------------------------------------------------------------------------'
    */
+   /*
   [_DVORAK] = LAYOUT( \
       KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
       KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                      KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSLS, \
@@ -132,7 +133,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       MO(_LOWER),MO(_LOWER),  KC_CAPS, KC_LALT, KC_LGUI, KC_SPC,  LT(_RAISE,KC_BSPC), \
                                                          LT(_RAISE,KC_ENT), KC_SPC,  KC_RGUI, KC_RALT, KC_APP,MO(_LOWER),MO(_LOWER) \
       ),
+  */
 
+  /* AriEucalyn (http://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
+   * ,-----------------------------------------.             ,-----------------------------------------.
+   * | ESC  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  | Bksp |
+   * |------+------+------+------+------+------|             |------+------+------+------+------+------|
+   * | Tab  |   Q  |   W  |   ,  |   .  |   ;  |             |   M  |   R  |   D  |   Y  |   P  |  \   |
+   * |------+------+------+------+------+------|             |------+------+------+------+------+------|
+   * | Ctrl |   A  |   O  |   E  |   I  |   U  |             |   G  |   T  |   K  |   S  |   N  |  -   |
+   * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+   * | Shift|   Z  |   X  |   C  |   V  |   F  |   `  |   '  |   B  |   H  |   J  |   L  |   /  |  =   |
+   * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+   * |Lower | Raise| Caps |  Alt |  GUI | Space|  BS  | Enter| Space|   (  |   [  |   {  |Raise |Lower |
+   * `-------------------------------------------------------------------------------------------------'
+   */
+  [_DVORAK] = LAYOUT( \
+      KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+      KC_TAB,  KC_Q,    KC_W,    KC_COMM, KC_DOT,  KC_SCLN,                   KC_M,    KC_R,    KC_D,    KC_Y,    KC_P,    KC_BSLS, \
+      KC_LCTL, KC_A,    KC_O,    KC_E,    KC_I,    KC_U,                      KC_G,    KC_T,    KC_K,    KC_S,    KC_N,    KC_MINS, \
+      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_F,   KC_GRV,  KC_QUOT,  KC_B,    KC_H,    KC_J,    KC_L,    KC_SLSH, KC_EQL, \
+      MO(_LOWER),MO(_RAISE),  KC_CAPS, KC_LALT, KC_LGUI, KC_SPC, KC_BSPC,KC_ENT, KC_SPC,  LSFT(KC_9), KC_LBRC, LSFT(KC_LBRC),MO(_RAISE),MO(_LOWER) \
+      ),
   /* Eucalyn (http://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
    * ,-----------------------------------------.             ,-----------------------------------------.
    * | ESC  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  | Bksp |
@@ -518,7 +540,7 @@ static void render_logo(struct CharacterMatrix *matrix) {
 
 static const char Qwerty_name[]  PROGMEM = " Qwerty";
 static const char Colemak_name[] PROGMEM = " Colemak";
-static const char Dvorak_name[]  PROGMEM = " Dvorak";
+static const char Dvorak_name[]  PROGMEM = " AriEucalyn";
 static const char Eucalyn_name[] PROGMEM = " Eucalyn";
 static const char Keypad_name[]  PROGMEM = " Keypad";
 
