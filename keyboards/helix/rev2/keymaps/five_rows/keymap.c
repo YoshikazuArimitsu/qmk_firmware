@@ -145,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   F  |   `  |   '  |   B  |   H  |   J  |   L  |   /  |  =   |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * |Lower | Raise| Caps |  Alt |  GUI | Space|  BS  | Enter| Space|   (  |   [  |   {  |Raise |Lower |
+   * |Lower | Raise|  GUI |  Alt |  GUI | Space|  BS  | Enter| Space|   (  |   [  |   {  |Raise |Lower |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_DVORAK] = LAYOUT( \
@@ -153,7 +153,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,  KC_Q,    KC_W,    KC_COMM, KC_DOT,  KC_SCLN,                   KC_M,    KC_R,    KC_D,    KC_Y,    KC_P,    KC_BSLS, \
       KC_LCTL, KC_A,    KC_O,    KC_E,    KC_I,    KC_U,                      KC_G,    KC_T,    KC_K,    KC_S,    KC_N,    KC_MINS, \
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_F,   KC_GRV,  KC_QUOT,  KC_B,    KC_H,    KC_J,    KC_L,    KC_SLSH, KC_EQL, \
-      MO(_LOWER),MO(_RAISE),  KC_CAPS, KC_LALT, KC_LGUI, KC_SPC, KC_BSPC,KC_ENT, KC_SPC,  LSFT(KC_9), KC_LBRC, LSFT(KC_LBRC),MO(_RAISE),MO(_LOWER) \
+      MO(_LOWER),MO(_RAISE),  KC_APP, KC_LALT, KC_LGUI, KC_SPC, KC_BSPC,KC_ENT, KC_SPC,  LSFT(KC_9), KC_LBRC, LSFT(KC_LBRC),MO(_RAISE),MO(_LOWER) \
       ),
   /* Eucalyn (http://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
    * ,-----------------------------------------.             ,-----------------------------------------.
@@ -282,7 +282,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LSFT(KC_MINS), KC_MINS,         KC_EQL, LSFT(KC_EQL), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
       _______, XXXXXXX, XXXXXXX, XXXXXXX, LSFT(KC_LBRC), KC_LBRC,       KC_RBRC, LSFT(KC_RBRC), XXXXXXX, XXXXXXX, XXXXXXX, _______, \
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    EISU,    EISU,    KANA,    KANA, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY, _______, \
-      MO(_ADJUST),MO(_ADJUST),XXXXXXX, _______, _______, XXXXXXX, _______,
+      MO(_ADJUST),MO(_ADJUST),KC_CAPS, _______, _______, XXXXXXX, _______,
                                                                 _______, XXXXXXX, LSFT(KC_0), KC_RBRC, LSFT(KC_RBRC),MO(_ADJUST),MO(_ADJUST) \
       ),
 
