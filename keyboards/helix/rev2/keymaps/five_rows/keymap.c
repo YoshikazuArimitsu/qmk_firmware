@@ -61,6 +61,7 @@ enum custom_keycodes {
 #define KC_LSEQ   LSFT(KC_EQL)
 #define KC_LSRB   LSFT(KC_RBRC)
 #define KC_LSLB   LSFT(KC_LBRC)
+#define KC_LS09   LSFT(KC_9)
 #define ___       _______
 
 #if MATRIX_ROWS == 10 // HELIX_ROWS == 5
@@ -201,7 +202,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
    * |      |      |      |      |      | EISU | EISU | KANA | KANA | Next | Vol- | Vol+ | Play |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+   * |      |      | CAPS |      |      |      |      |      |      |  )   |  ]   |  }   |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_RAISE] = LAYOUT_kc( \
@@ -209,7 +210,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXX, XXXX, XXXX, XXXX, LSMI, MINS,              EQL, LSEQ, XXXX, XXXX, XXXX, XXXX, \
       ____, XXXX, XXXX, XXXX, LSLB, LBRC,             RBRC, LSRB, XXXX, XXXX, XXXX, ____, \
       ____, XXXX, XXXX, XXXX, XXXX,xEISU,xEISU, xKANA,xKANA,MNXT, VOLD, VOLU, MPLY, ____, \
-      ADJ,   ADJ, XXXX, ____, ____, XXXX, ____, ____, XXXX, ____, ____, XXXX,  ADJ,  ADJ \
+      ADJ,   ADJ, CAPS, ____, ____, XXXX, ____, ____, XXXX, RPRN, RBRC, LSRB,ADJ,  ADJ \
       ),
 
   /* Adjust (Lower + Raise)
