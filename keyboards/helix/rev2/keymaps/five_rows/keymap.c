@@ -200,7 +200,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * |      |      |      |      |  {   |  [   |             |  ]   |  }   |      |      |      |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * |      |      |      |      |      | EISU | EISU | KANA | KANA | Next | Vol- | Vol+ | Play |      |
+   * |      |      |      |      |      | KANJI| EISU | KANA | KANJI| Next | Vol- | Vol+ | Play |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
    * |      |      | CAPS |      |      |      |      |      |      |  )   |  ]   |  }   |      |      |
    * `-------------------------------------------------------------------------------------------------'
@@ -209,7 +209,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXX, XXXX, XXXX, XXXX, XXXX, XXXX,             XXXX, XXXX, XXXX, XXXX, XXXX, XXXX, \
       XXXX, XXXX, XXXX, XXXX, LSMI, MINS,              EQL, LSEQ, XXXX, XXXX, XXXX, XXXX, \
       ____, XXXX, XXXX, XXXX, LSLB, LBRC,             RBRC, LSRB, XXXX, XXXX, XXXX, ____, \
-      ____, XXXX, XXXX, XXXX, XXXX,xEISU,xEISU, xKANA,xKANA,MNXT, VOLD, VOLU, MPLY, ____, \
+      ____, XXXX, XXXX, XXXX, XXXX, ZKHK,xEISU, xKANA,ZKHK, MNXT, VOLD, VOLU, MPLY, ____, \
       ADJ,   ADJ, CAPS, ____, ____, XXXX, ____, ____, XXXX, RPRN, RBRC, LSRB,ADJ,  ADJ \
       ),
 
