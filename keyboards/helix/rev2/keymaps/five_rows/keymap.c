@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       LOWER, LOWER, CAPS, LALT, LGUI, SPC, RABS,  RAEN, SPC, RGUI, RALT,  APP,LOWER, LOWER \
       ),
 
-    /* AriEucalyn (http://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
+  /* AriEucalyn (http://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
    * ,-----------------------------------------.             ,-----------------------------------------.
    * | ESC  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  | Bksp |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
