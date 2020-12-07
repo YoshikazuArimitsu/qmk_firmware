@@ -45,6 +45,7 @@ enum custom_keycodes {
   KEYPAD,
   KC_xEISU,
   KC_xKANA,
+  KC_xZKHK,
   KC_ZERO2,
   RGBRST
 };
@@ -200,7 +201,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * |      |      |      |      |  {   |  [   |             |  ]   |  }   |      |      |      |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * |      |      |      |      |      | KANJI| EISU | KANA | KANJI| Next | Vol- | Vol+ | Play |      |
+   * |      |      |      |      |      | ZKHK | EISU | KANA | ZKHK | Next | Vol- | Vol+ | Play |      |
    * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
    * |      |      | CAPS |      |      |      |      |      |      |  )   |  ]   |  }   |      |      |
    * `-------------------------------------------------------------------------------------------------'
@@ -209,7 +210,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXX, XXXX, XXXX, XXXX, XXXX, XXXX,             XXXX, XXXX, XXXX, XXXX, XXXX, XXXX, \
       XXXX, XXXX, XXXX, XXXX, LSMI, MINS,              EQL, LSEQ, XXXX, XXXX, XXXX, XXXX, \
       ____, XXXX, XXXX, XXXX, LSLB, LBRC,             RBRC, LSRB, XXXX, XXXX, XXXX, ____, \
-      ____, XXXX, XXXX, XXXX, XXXX, ZKHK,xEISU, xKANA,ZKHK, MNXT, VOLD, VOLU, MPLY, ____, \
+      ____, XXXX, XXXX, XXXX, XXXX,xZKHK,xEISU, xKANA,xZKHK, MNXT, VOLD, VOLU, MPLY, ____, \
       ADJ,   ADJ, CAPS, ____, ____, XXXX, ____, ____, XXXX, RPRN, RBRC, LSRB,ADJ,  ADJ \
       ),
 
@@ -385,6 +386,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
       } else {
         unregister_code(KC_LANG1);
+      }
+      return false;
+      break;
+    case KC_xZKHK:
+      if (record->event.pressed) {
+        SEND_STRING(SS_LALT("`"));
       }
       return false;
       break;
